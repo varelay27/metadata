@@ -1,8 +1,22 @@
 <?php
 
+/**
+ * If the variable is empty, return NULL. If the variable contains letters, return the variable wrapped
+ * in single quotes. Otherwise, return the variable.
+ **/
 function revisar_dato ($var) {
     if (empty($var)){
         return 'NULL'; 
+    } elseif(preg_match("/[a-z]/i",$var)) {
+        return '\''.$var.'\'';
+    } else {
+        return $var; 
+    }
+}
+
+function revisar_obj_job_parameters ($var) {
+    if (empty($var)){
+        return '||'; 
     } elseif(preg_match("/[a-z]/i",$var)) {
         return '\''.$var.'\'';
     } else {
@@ -17,7 +31,7 @@ if (isset($_POST['enviar_meta'])) {
     $ERROR_THRESHOLD = revisar_dato($_POST['ERROR_THRESHOLD']);
     $LOAD_GRP = revisar_dato($_POST['LOAD_GRP']);
     $LOAD_TYPE = revisar_dato($_POST['LOAD_TYPE']);
-    $OBJ_JOB_PARAMETERS = revisar_dato($_POST['OBJ_JOB_PARAMETERS']); 
+    $OBJ_JOB_PARAMETERS = revisar_obj_job_parameters($_POST['OBJ_JOB_PARAMETERS']); 
     $SELECT_STMT = revisar_dato($_POST['SELECT_STMT']); 
     $FILTER_CONDITIONS = revisar_dato($_POST['FILTER_CONDITIONS']);
     $ACTIVE_FLG = revisar_dato($_POST['ACTIVE_FLG']);
@@ -74,8 +88,8 @@ if (isset($_POST['enviar_meta'])) {
             ,$SPLIT_BY_COL
             ,$MAPPERS
             ,$HARDDELETE
-            ,$CREATED_DTTM
-            ,$UPDATED_DTTM
+            ,getdate()
+            ,getdate()
             ,$CREATED_BY
             ,$UPDATED_BY
             ,$APP_ID
