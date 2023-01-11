@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style></style>
 </head>
 <body>
 <form class="container" action="funciones.php"  method="POST" enctype="multipart/form-data">
@@ -28,6 +29,11 @@
 <div class="form-group">
 <label>LOAD_GRP:</label>
 <input type="text" class="form-control" id="" name="LOAD_GRP">
+</div>
+<br>
+<div class="form-group">
+<label>LOAD_TYPE:</label>
+<input type="text" class="form-control" id="" name="LOAD_TYPE">
 </div>
 <br>
 <div class="form-group">
@@ -68,6 +74,42 @@
 <div class="form-group">
 <label>MAPPERS:</label>
 <input type="text" class="form-control" id="" name="MAPPERS">
+</div>
+<br>
+
+<div class="form-group">
+<label>HARDDELETE:</label>
+<input type="text" class="form-control" id="" name="HARDDELETE">
+</div>
+<br>
+<div class="form-group">
+<label>CREATED_DTTM:</label>
+<input type="text" class="form-control" id="" name="CREATED_DTTM">
+</div>
+<br>
+<div class="form-group">
+<label>UPDATED_DTTM:</label>
+<input type="text" class="form-control" id="" name="UPDATED_DTTM">
+</div>
+<br>
+<div class="form-group">
+<label>CREATED_BY:</label>
+<input type="text" class="form-control" id="" name="CREATED_BY">
+</div>
+<br>
+<div class="form-group">
+<label>UPDATED_BY:</label>
+<input type="text" class="form-control" id="" name="UPDATED_BY">
+</div>
+<br>
+<div class="form-group">
+<label>APP_ID:</label>
+<input type="text" class="form-control" id="" name="APP_ID">
+</div>
+<br>
+<div class="form-group">
+<label>PARTITION_COL:</label>
+<input type="text" class="form-control" id="" name="PARTITION_COL">
 </div>
 <br>
 <div class="form-group">
